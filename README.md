@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VirtuSol Modern Website
 
-## Getting Started
+A production-grade, AI-first marketing website for VirtuSol, built with Next.js 14+ (App Router) and Tailwind CSS v4.
 
-First, run the development server:
+## 🧱 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: Tailwind CSS v4
+- **Language**: TypeScript
+- **UI Utils**: `clsx`, `tailwind-merge`
+- **Icons**: `lucide-react`
+- **Typogaphy**: Inter (Headings), Source Sans 3 (Body), Space Mono (Data)
+
+## 📁 Project Structure
+
+```
+/src
+  /app              # App Router Pages (Home, etc.)
+  /components
+    /layout         # Header, Footer
+    /sections       # Page-specific sections (Hero, etc.)
+    /ui             # Reusable primitives (Buttons, etc.)
+  /lib              # Utilities (cn, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Brand System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Configured in `src/app/globals.css` via CSS variables:
+- **Primary**: Deep Navy (`#0B1B2B`)
+- **Accent**: Electric Blue (`#2F80ED`)
+- **Secondary**: Emerald (`#2ECC71`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 How to Run Locally
 
-## Learn More
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Start Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Visit `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Build for Production**:
+   ```bash
+   npm run build
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ Status
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Core Architecture**: Ready
+- **Design System**: Implemented (Colors, Fonts, Tailwind)
+- **Layout**: Header (Sticky) & Footer (Full) implemented
+- **Home Page**: Hero, Value Blocks, CTA Band implemented
