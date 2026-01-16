@@ -28,8 +28,33 @@ export default function SystemsPage() {
                                     Our systems don't start with code. They start with logic. We architect decision frameworks that prioritize signal over noise, ensuring every action taken is rooted in verifiable intelligence.
                                 </p>
                                 <p>
-                                    Whether it's interpreting market shifts or validating creator alignment, our protocols are designed to protect the integrity of the final decision.
+                                    Whether it's interpreting market shifts or validating creator alignment, our protocols are designed to protect the integrity of the final decision. We call this <span className="text-white font-bold">Logic-First Architecture</span>.
                                 </p>
+                            </div>
+                        </section>
+
+                        {/* NEW SECTION – THE DECISION CORE */}
+                        <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400 py-24 border-y border-white/5">
+                            <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-accent mb-12">The Decision Core Logic</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                                <div className="space-y-6">
+                                    <span className="text-[10px] text-white/30 uppercase tracking-[0.3em]">01 / Filtration</span>
+                                    <p className="text-lg text-white/70 font-light leading-relaxed">
+                                        Raw data is passed through a high-authority filter. We strip away volume metrics that lack intent, leaving only the "Judgment Signal."
+                                    </p>
+                                </div>
+                                <div className="space-y-6">
+                                    <span className="text-[10px] text-white/30 uppercase tracking-[0.3em]">02 / Calibration</span>
+                                    <p className="text-lg text-white/70 font-light leading-relaxed">
+                                        The signal is calibrated against the specific physics of your category—be it retail shelf space or the attention economy of digital creators.
+                                    </p>
+                                </div>
+                                <div className="space-y-6">
+                                    <span className="text-[10px] text-white/30 uppercase tracking-[0.3em]">03 / Command Path</span>
+                                    <p className="text-lg text-white/70 font-light leading-relaxed">
+                                        The output isn't a report. It's a command path—a verified operational sequence that makes growth inevitable.
+                                    </p>
+                                </div>
                             </div>
                         </section>
 
@@ -39,19 +64,19 @@ export default function SystemsPage() {
                                 <div className="border-t border-white/10 pt-8">
                                     <h3 className="text-2xl font-bold text-white mb-4">Signal Integrity</h3>
                                     <p className="text-lg text-white/50 font-light max-w-2xl">
-                                        Automated monitoring systems that filter out vanity metrics and focus on high-authority indicators.
+                                        Automated monitoring systems that filter out vanity metrics and focus on high-authority indicators. We prioritize <span className="text-white">certainty over scale</span>.
                                     </p>
                                 </div>
                                 <div className="border-t border-white/10 pt-8">
                                     <h3 className="text-2xl font-bold text-white mb-4">Decision Mapping</h3>
                                     <p className="text-lg text-white/50 font-light max-w-2xl">
-                                        Visual and logical mapping of complex dependencies to reveal the "moment before action."
+                                        Visual and logical mapping of complex dependencies to reveal the "moment before action." This is where we identify the pivot points before they become costs.
                                     </p>
                                 </div>
                                 <div className="border-t border-white/10 pt-8">
                                     <h3 className="text-2xl font-bold text-white mb-4">Dynamic Response</h3>
                                     <p className="text-lg text-white/50 font-light max-w-2xl">
-                                        Agile adjustment protocols that allow teams to pivot based on real-time signal interpretation.
+                                        Agile adjustment protocols that allow teams to pivot based on real-time signal interpretation. Not a pivot based on hope, but a pivot based on verified shifts.
                                     </p>
                                 </div>
                             </div>

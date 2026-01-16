@@ -95,6 +95,27 @@ export default function Connect1to1Page() {
                         </div>
                     </section>
 
+                    {/* SCENARIO SYNTHESIS */}
+                    <section className="mb-48 space-y-16">
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Scenario Synthesis</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Shelf Space Void</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A major health-food retailer identifies a 30% drop in their "Vegan Snacks" category but a 50% spike in "Keto Essentials." They have no verified keto vendors in their intake pipeline. <br /><br />
+                                    <strong>Signal:</strong> Contact pre-verified Keto vendors. Bypass the 6-month review cycle. Fill the gap in 14 days.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Strategic Match</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A boutique hardware vendor has a product that solves a specific "Return Rate" issue for smart-home retailers. Connect 1to1 identifies three retailers currently logging high return-handling costs for competing products.<br /><br />
+                                    <strong>Signal:</strong> Facilitate 1-to-1 introduction based on cost-saving data. Close the partnership based on logic, not charm.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* CALL TO ACTION */}
                     <div className="pt-16">
                         <Link href="/contact" className="group">

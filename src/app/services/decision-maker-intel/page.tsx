@@ -94,6 +94,27 @@ export default function DecisionMakerIntelPage() {
                         </div>
                     </section>
 
+                    {/* SCENARIO SYNTHESIS */}
+                    <section className="mb-48 space-y-16">
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Scenario Synthesis</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Calibration Gap</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    An AE has been following up with a CMO for three months. The Intel identifies that the CMO has just initiated a major agency review. <br /><br />
+                                    <strong>Signal:</strong> Stop the follow-up. Transition To "Support Intelligence" mode. Provide the metrics they need for the review. Win the trust, not the meeting.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Strategic Pivot</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    Leadership wants to pitch a Fortune 500 account. Intel reveals the key stakeholder has shifted their focus from "Cost Reduction" to "Risk Mitigation" based on recent internal shareholder communications.<br /><br />
+                                    <strong>Signal:</strong> Refactor the pitch immediately. Focus on stability features. Move to the front of the line.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* CALL TO ACTION */}
                     <div className="pt-16">
                         <Link href="/contact" className="group">

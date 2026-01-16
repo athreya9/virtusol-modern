@@ -95,6 +95,27 @@ export default function InflencySignalPage() {
                         </div>
                     </section>
 
+                    {/* SCENARIO SYNTHESIS */}
+                    <section className="mb-48 space-y-16">
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Scenario Synthesis</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Trust Trap</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A creator receives a high-six-figure offer to promote a new crypto-trading app. The Inflency Signal identifies that their audience has a high "Skepticism Index" toward financial products after a recent industry crash. <br /><br />
+                                    <strong>Signal:</strong> Reject the deal. The payout will not cover the long-term audience decay. Wait for a "Utility-First" partnership.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Hidden Alignment</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A brand is considering a "Tier 1" celebrity for their campaign. The Signal reveals that a "Tier 3" niche expert has 4x the "Specific Authority" over the brand's core product category. <br /><br />
+                                    <strong>Signal:</strong> Reallocate 80% of budget to the expert. Achieve deeper penetration for 20% of the cost.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* CALL TO ACTION */}
                     <div className="pt-16">
                         <Link href="/contact" className="group">

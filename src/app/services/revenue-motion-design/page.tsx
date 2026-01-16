@@ -94,6 +94,27 @@ export default function RevenueMotionDesignPage() {
                         </div>
                     </section>
 
+                    {/* SCENARIO SYNTHESIS */}
+                    <section className="mb-48 space-y-16">
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Scenario Synthesis</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Multi-Stakeholder Stall</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A SaaS company has plenty of "Demo" activity, but deals stall at the 80% mark because legal and security teams aren't aligned early enough. <br /><br />
+                                    <strong>Signal:</strong> Redesign the motion. Place the "Security Signal" check 2 weeks earlier. Automate the "Legal Verification" intake. Re-accelerate the close.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Channel Leak</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A manufacturer is losing revenue signal once their product leaves the warehouse. They aren't sure which retailers are actually pushing the product vs just holding inventory. <br /><br />
+                                    <strong>Signal:</strong> Implement "Downstream Pull" signals. Architect a motion where retailers receive rebates only upon verified "End-User Intake." Regain control of the motion.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* CALL TO ACTION */}
                     <div className="pt-16">
                         <Link href="/contact" className="group">

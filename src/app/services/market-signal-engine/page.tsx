@@ -94,6 +94,27 @@ export default function MarketSignalEnginePage() {
                         </div>
                     </section>
 
+                    {/* SCENARIO SYNTHESIS */}
+                    <section className="mb-48 space-y-16">
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Scenario Synthesis</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Pivot Warning</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A founder plans to enter the EMEA market with a legacy pricing model. The Engine identifies a shift in competitive density and rising demand for "Consumption-based" models in that specific region. <br /><br />
+                                    <strong>Signal:</strong> Delay entry 6 weeks. Adjust pricing architecture. Prevent immediate churn.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Demand Void</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A brand believes their next product line should focus on "Sustainability." The Engine reveals that while sustainability is talked about, the actual demand signal is currently focused on "Longevity and Durability." <br /><br />
+                                    <strong>Signal:</strong> Refactor product narrative. Align with verified demand, not verbal trends.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* CALL TO ACTION */}
                     <div className="pt-16">
                         <Link href="/contact" className="group">

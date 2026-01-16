@@ -162,7 +162,33 @@ export default function EngagementPage() {
                     </p>
                 </section>
 
-                {/* SECTION 5 — WHO THIS MODEL WORKS FOR */}
+                {/* SECTION 5 — ENGAGEMENT MODELS */}
+                <section className="mb-48 py-24 border-t border-white/5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                        <div className="space-y-12">
+                            <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Engagement Models</span>
+                            <h3 className="text-3xl md:text-5xl font-bold uppercase tracking-tight">How we partner.</h3>
+                        </div>
+                        <div className="space-y-16">
+                            <div className="space-y-6">
+                                <h4 className="text-xl font-bold text-white uppercase tracking-tight">01 / The Signal Sprint</h4>
+                                <p className="text-lg text-white/50 font-light leading-relaxed">
+                                    A high-intensity, 4-week engagement focused on a singular high-stakes decision. Ideal for market entry, product pivots, or creator alignment checks. <br />
+                                    <span className="text-white font-bold">Outcome: A verified Go/No-Go command path.</span>
+                                </p>
+                            </div>
+                            <div className="space-y-6">
+                                <h4 className="text-xl font-bold text-white uppercase tracking-tight">02 / The Decision Retainer</h4>
+                                <p className="text-lg text-white/50 font-light leading-relaxed">
+                                    Ongoing access to the VirtuSol intelligence layer. We act as a "Shadow Board," monitoring signals and alerting your team before strategic decay sets in. <br />
+                                    <span className="text-white font-bold">Outcome: Continuous architectural integrity of your growth motion.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* SECTION 6 — THE MATCH */}
                 <section className="mb-48 py-24 border-t border-white/5">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
                         <div className="space-y-12">

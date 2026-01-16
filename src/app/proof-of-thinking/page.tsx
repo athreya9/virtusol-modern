@@ -54,8 +54,31 @@ export default function ProofOfThinkingPage() {
                         </p>
                     </section>
 
+                    {/* NEW SECTION – THE DISCOVERY PAUSE */}
+                    <div className="mb-48 py-24 border-y border-white/5">
+                        <div className="max-w-3xl space-y-12">
+                            <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Core Philosophy</span>
+                            <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter leading-tight">
+                                The Discovery Pause™
+                            </h2>
+                            <p className="text-xl font-light leading-relaxed text-white/60">
+                                Most failure is not a failure of ability, but a failure of timing. The Discovery Pause is the intentional interval where the VirtuSol engine processes raw signal before allowing human action. It is the buffer that replaces impulse with architecture.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+                                <div className="space-y-4">
+                                    <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold italic">Before the Pause</h4>
+                                    <p className="text-sm text-white/40 uppercase tracking-widest leading-relaxed">Urgent, reactive, volume-heavy, high-anxiety execution.</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold italic">After the Pause</h4>
+                                    <p className="text-sm text-white/40 uppercase tracking-widest leading-relaxed">Calm, intentional, precise, logic-first growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* CALL TO ACTION */}
-                    <div className="pt-24 border-t border-white/5">
+                    <div className="pt-24">
                         <div className="max-w-xl mb-12">
                             <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Apply these patterns</h3>
                             <p className="text-white/40 font-light leading-relaxed">
@@ -63,7 +86,7 @@ export default function ProofOfThinkingPage() {
                             </p>
                         </div>
                         <Link href="/contact">
-                            <Button variant="glow" size="lg" magnetic className="h-20 px-12 text-lg font-bold uppercase tracking-widest">
+                            <Button variant="glow" size="lg" magnetic className="h-20 px-12 text-lg font-bold uppercase tracking-widest hover:border-accent/40 transition-all">
                                 Apply patterns to your category →
                             </Button>
                         </Link>

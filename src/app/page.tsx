@@ -129,6 +129,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW SECTION – HOW WE THINK */}
+      <section className="py-48 border-b border-white/5 bg-transparent relative z-10">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+            <div className="space-y-12">
+              <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">The Philosophy</span>
+              <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-[0.9] text-white mix-blend-exclusion">
+                Entropy vs. <br /> Architecture
+              </h2>
+            </div>
+            <div className="space-y-12 text-xl md:text-2xl font-light leading-relaxed text-white/50">
+              <p>
+                Most organizations are designed for entropy—adding more tools, more people, and more noise until the core objective is buried.
+              </p>
+              <p className="text-white">
+                We design for architecture.
+              </p>
+              <p>
+                By isolating the "moment of choice" and surrounding it with rigid decision filters, we allow teams to operate with the calm of a verified path.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION – THE PROTOCOL */}
+      <ImmersiveValueProp
+        title="The Protocol"
+        subtitle="How we synthesize raw market noise into verified growth signals."
+        items={[
+          "Intake: Identifying the high-authority signals hidden in raw data.",
+          "Synthesis: Processing signals through the VirtuSol Decision Core.",
+          "Architecture: Designing the logic-first operational path.",
+          "Execution: Moving with inevitable momentum once clarity is achieved."
+        ]}
+      />
+
       <CTABand
         title=""
         description=""

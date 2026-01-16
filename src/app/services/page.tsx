@@ -64,9 +64,9 @@ export default function ServicesPage() {
                         </h1>
                         <div className="space-y-6">
                             <p className="text-2xl text-white font-bold leading-relaxed">
-                                Each signal answers a different question.<br />
-                                You don’t need all of them.<br />
-                                <span className="text-accent underline underline-offset-8">You need the right one.</span>
+                                Not every signal is an invitation to act.<br />
+                                Most are invitations to wait.<br />
+                                <span className="text-accent underline underline-offset-8">We find the few that matter.</span>
                             </p>
                         </div>
                     </div>
@@ -82,6 +82,38 @@ export default function ServicesPage() {
                             Discover the Field
                         </div>
                     </div>
+
+                    {/* THE INTELLIGENCE FRAMEWORK */}
+                    <section className="py-24 border-t border-white/5 bg-transparent relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                            <div className="space-y-12">
+                                <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">The Framework</span>
+                                <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-[0.9] text-white mix-blend-exclusion">
+                                    Why These <br /> Signals?
+                                </h2>
+                            </div>
+                            <div className="space-y-16">
+                                <div className="space-y-6">
+                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Intent over Action</h3>
+                                    <p className="text-lg text-white/50 font-light leading-relaxed">
+                                        In the digital era, "doing something" is the default. We believe action is a liability unless it is preceded by an architectural intent. Our signals verify intent before you commit capital.
+                                    </p>
+                                </div>
+                                <div className="space-y-6">
+                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Signal over Noise</h3>
+                                    <p className="text-lg text-white/50 font-light leading-relaxed">
+                                        Algorithms prioritize engagement; we prioritize authority. Our systems filter for high-authority signals—indicators that the market isn't just watching, but shifting.
+                                    </p>
+                                </div>
+                                <div className="space-y-6">
+                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Certainty over Speed</h3>
+                                    <p className="text-lg text-white/50 font-light leading-relaxed">
+                                        The fastest to move is often the first to fail. We provide the "Discovery Pause"—a calculated interval where judgment replaces impulse, ensuring that when you do move, the path is already verified.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>

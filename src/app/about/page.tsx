@@ -39,21 +39,38 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-24 mb-48 items-center">
+                    {/* NEW SECTION – HUMAN GROUNDING */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-24 mb-48">
                         <div className="space-y-12">
-                            <p className="text-2xl text-white/80 font-light leading-relaxed">
-                                Not to generate more activity.<br />
-                                <span className="text-white font-bold non-italic">But to help you decide what not to do.</span>
-                            </p>
+                            <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Human Grounding</span>
+                            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase leading-[0.9] text-white mix-blend-exclusion">
+                                AI has no <br /> Skin in the Game
+                            </h2>
                         </div>
-                        <div className="space-y-4 text-white uppercase tracking-[0.3em] font-bold text-sm">
-                            <p>• We read markets</p>
-                            <p>• We observe behavior</p>
-                            <p>• We track timing</p>
+                        <div className="space-y-12 text-xl font-light leading-relaxed text-white/50">
+                            <p>
+                                Every algorithm can generate an answer. None can feel the weight of the consequences.
+                            </p>
+                            <p>
+                                VirtuSol rejects autonomous decision-making. We believe in <span className="text-white font-bold">Augmented Judgment</span>—using the raw processing power of machines to illuminate the path, so that human intuition can finally see clearly.
+                            </p>
                         </div>
                     </div>
 
-                    <div className="mb-32 py-24 border-t border-white/5">
+                    {/* NEW SECTION – ORIGIN NARRATIVE */}
+                    <div className="mb-48 py-24 border-y border-white/5">
+                        <div className="max-w-3xl space-y-12">
+                            <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Origin</span>
+                            <p className="text-2xl md:text-3xl text-white/80 font-light leading-relaxed italic">
+                                "We started VirtuSol because we were tired of watching high-potential founders be suffocated by their own noise. We wanted to build a sanctuary for clarity."
+                            </p>
+                            <p className="text-lg text-white/40 font-light">
+                                Founded on the principle that complexity is a choice, not an inevitability. We exist to simplify the equation of growth by architecting the signals that matter most.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mb-32">
                         <p className="text-3xl md:text-5xl text-white font-bold mb-12 uppercase tracking-tighter">
                             And when signals align,<br />
                             action becomes calm instead of frantic.

@@ -94,6 +94,27 @@ export default function PerformanceSignalMonitoringPage() {
                         </div>
                     </section>
 
+                    {/* SCENARIO SYNTHESIS */}
+                    <section className="mb-48 space-y-16">
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 block">Scenario Synthesis</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The CAC Cliff</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    A direct-to-consumer brand is scaling their Meta spend. The Monitoring Signal detects a slight "Creative Fatigue" signal in the top 5% of their audience, predicted to spike CAC by 40% in the next 10 days. <br /><br />
+                                    <strong>Signal:</strong> Stop the spend increase. Rotate creative architecture immediately. Preserve the margin.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/5 bg-white/[0.02] space-y-6">
+                                <h4 className="text-xs uppercase tracking-[0.3em] text-accent font-bold">The Opportunity Surge</h4>
+                                <p className="text-white/60 font-light leading-relaxed">
+                                    An enterprise SaaS team is focusing on "Cloud Security" content. Monitoring reveals an organic "Authority Spike" in the "Zero Trust for SMB" niche that isn't being reflected in their paid acquisition metrics yet. <br /><br />
+                                    <strong>Signal:</strong> Reallocate 30% of underperforming legacy spend to the Zero Trust niche. Capture the move before competitors bid up the price.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* CALL TO ACTION */}
                     <div className="pt-16">
                         <Link href="/contact" className="group">
