@@ -36,8 +36,7 @@ export function ContactForm() {
             // Include Timestamp, Selected System, and Full Payload
             const payload = {
                 ...formData,
-                timestamp: new Date().toISOString(),
-                recipient: "kevin@virtusol.com"
+                timestamp: new Date().toISOString()
             };
 
             const response = await fetch('/api/contact', {

@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   description: 'Matchmaking for brands, influencers, and retailers. Fraud-free, outcome-based growth.',
   icons: {
     icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 

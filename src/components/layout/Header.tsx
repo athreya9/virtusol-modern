@@ -29,15 +29,15 @@ export function Header() {
             <div className="flex items-center justify-between">
                 {/* Logo - Minimal & Text forward */}
                 <Link href="/" className="group flex items-center gap-4">
-                    <div className="relative w-10 h-10 flex items-center justify-center">
+                    <div className="relative w-16 h-16 flex items-center justify-center">
                         <img
                             src="/favicon.png"
                             alt="VirtuSol Decision Core"
                             className="w-full h-full object-contain mix-blend-screen opacity-90 group-hover:scale-110 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-accent/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-accent/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
-                    <span className="text-2xl font-bold tracking-tighter text-white mix-blend-exclusion uppercase font-source-sans">
+                    <span className="text-3xl font-bold tracking-tighter text-white mix-blend-exclusion uppercase font-source-sans">
                         Virtusol
                     </span>
                     <span className="h-[1px] w-6 bg-white/40 group-hover:w-12 transition-all"></span>

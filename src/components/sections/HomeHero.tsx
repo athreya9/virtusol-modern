@@ -60,17 +60,17 @@ export function HomeHero() {
                     {/* 👑 Bold, Immersive Headline */}
                     <h1
                         ref={titleRef}
-                        className="text-7xl md:text-[11rem] font-bold tracking-[ -0.05em] leading-[0.85] text-white mix-blend-exclusion uppercase"
+                        className="text-7xl md:text-[10rem] font-bold tracking-[-0.05em] leading-[0.85] text-white mix-blend-exclusion uppercase"
                     >
-                        Strategic <br />
-                        <span className="text-transparent stroke-text">Signals</span>
+                        Strategic Signals <br />
+                        <span className="text-transparent stroke-text">for Real Decisions</span>
                     </h1>
 
                     <p
                         ref={subtitleRef}
                         className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto text-balance leading-relaxed pt-8"
                     >
-                        Clarity for teams navigating noise, timing, and real decisions.
+                        Clarity for teams navigating noise, timing, and irreversible choices.
                     </p>
 
                     {/* ⚡ Cinematic Action */}

@@ -27,13 +27,13 @@ export function Footer() {
                     {/* Brand Column */}
                     <div className="space-y-8">
                         <Link href="/" className="flex items-center gap-4 group">
-                            <div className="relative w-8 h-8 flex items-center justify-center">
+                            <div className="relative w-14 h-14 flex items-center justify-center">
                                 <img
                                     src="/favicon.png"
                                     alt="VirtuSol Decision Core"
                                     className="w-full h-full object-contain mix-blend-screen opacity-70 group-hover:scale-110 transition-all duration-500"
                                 />
-                                <div className="absolute inset-0 bg-accent/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-accent/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
                             <span className="text-2xl font-bold tracking-[0.3em] uppercase mix-blend-exclusion">VirtuSol</span>
                         </Link>
@@ -60,9 +60,15 @@ export function Footer() {
                     <div>
                         <h3 className="font-bold text-white mb-8 uppercase tracking-[0.4em] text-[10px] opacity-30">Where We Are</h3>
                         <div className="space-y-4 text-xs tracking-widest uppercase text-white/40 font-light leading-relaxed">
-                            <p>92 Park Groton Pl, <br />San Jose, CA 95136</p>
-                            <p>+1(408)657.7085</p>
-                            <p>kevin@virtusol.com</p>
+                            <div>
+                                <p className="text-white/20 mb-2">USA HQ</p>
+                                <p>92 Park Groton Pl, <br />San Jose, CA 95136</p>
+                            </div>
+                            <div>
+                                <p className="text-white/20 mb-2">India Office</p>
+                                <p>Coming Soon</p>
+                            </div>
+                            <p className="pt-4 font-bold text-white/60">info@virtusol.com</p>
                         </div>
                     </div>
 
