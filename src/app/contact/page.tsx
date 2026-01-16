@@ -1,4 +1,7 @@
 import { ContactForm } from "@/components/features/ContactForm";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const metadata = {
     title: "Start a Conversation | VirtuSol Decision Intelligence",
@@ -22,12 +25,26 @@ export default function ContactPage() {
 
                     {/* PAGE HEADER */}
                     <div className="mb-24 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
-                        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9] mb-8 mix-blend-exclusion">
-                            Start a <br /> Conversation
-                        </h1>
-                        <p className="text-2xl text-accent font-light max-w-2xl leading-relaxed uppercase tracking-widest text-sm">
-                            Begin with context, not commitment.
-                        </p>
+                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-8">
+                            <div className="space-y-8">
+                                <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9] mix-blend-exclusion">
+                                    Start a <br /> Conversation
+                                </h1>
+                                <p className="text-2xl text-accent font-light max-w-2xl leading-relaxed uppercase tracking-widest text-sm">
+                                    Begin with context, not commitment.
+                                </p>
+                            </div>
+
+                            <Link href="/book" className="group">
+                                <Button variant="glow" size="lg" magnetic className="h-24 px-10 rounded-2xl border-white/10 hover:border-accent/40 bg-white/[0.02]">
+                                    <div className="flex flex-col items-start gap-1 text-left">
+                                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-bold">Priority Access</span>
+                                        <span className="text-sm uppercase tracking-[0.2em] text-white group-hover:text-accent transition-colors">Secure Exclusive Timing</span>
+                                    </div>
+                                    <ArrowRight className="ml-6 h-5 w-5 text-accent animate-pulse" />
+                                </Button>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* TOP SECTION CONTENT */}

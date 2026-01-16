@@ -1,100 +1,155 @@
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const signals = [
+    {
+        title: "Inflency Signal™",
+        description: "Creator–brand alignment intelligence.",
+        slug: "inflency",
+        pos: { top: "20%", left: "15%" },
+        delay: 0
+    },
+    {
+        title: "Connect 1to1™",
+        description: "Demand-first partnerships and matching.",
+        slug: "connect-1to1",
+        pos: { top: "45%", left: "75%" },
+        delay: 0.2
+    },
+    {
+        title: "Market Signal Engine™",
+        description: "Where to play. Where not to.",
+        slug: "market-signal-engine",
+        pos: { top: "15%", left: "60%" },
+        delay: 0.4
+    },
+    {
+        title: "Decision-Maker Intel™",
+        description: "Who is actually ready to decide.",
+        slug: "decision-maker-intel",
+        pos: { top: "70%", left: "25%" },
+        delay: 0.6
+    },
+    {
+        title: "Revenue Motion Design™",
+        description: "Designing the path before you walk it.",
+        slug: "revenue-motion-design",
+        pos: { top: "55%", left: "40%" },
+        delay: 0.8
+    },
+    {
+        title: "Performance Signal Monitoring™",
+        description: "Knowing when to continue—or stop.",
+        slug: "performance-signal-monitoring",
+        pos: { top: "80%", left: "65%" },
+        delay: 1.0
+    }
+];
 
 export default function ServicesPage() {
-    const services = [
-        {
-            title: "Market Signal Engine™",
-            description: "Identifies where demand is forming, where it’s fading, and where not to play.",
-            slug: "market-signal-engine"
-        },
-        {
-            title: "Decision-Maker Intel™",
-            description: "Maps companies that are already deciding—not browsing.",
-            slug: "decision-maker-intel"
-        },
-        {
-            title: "Inflency Signal™",
-            description: "Creator–Brand Alignment Intelligence",
-            slug: "inflency"
-        },
-        {
-            title: "Connect 1to1™",
-            description: "Demand-First Vendor–Retailer Matching",
-            slug: "connect-1to1"
-        },
-        {
-            title: "Market Signal Engine™",
-            description: "Where to Play. Where Not To.",
-            slug: "market-signal-engine"
-        },
-        {
-            title: "Decision-Maker Intel™",
-            description: "Who Is Actually Ready to Decide",
-            slug: "decision-maker-intel"
-        },
-        {
-            title: "Revenue Motion Design™",
-            description: "Design the Path Before You Walk It",
-            slug: "revenue-motion-design"
-        },
-        {
-            title: "Performance Signal Monitoring™",
-            description: "Knowing When to Continue—or Stop",
-            slug: "performance-signal-monitoring"
-        }
-    ];
-
     return (
         <div className="flex min-h-screen flex-col bg-transparent text-white font-sans selection:bg-white selection:text-black">
             <main className="flex-1 pt-48 pb-24 relative overflow-hidden">
-                <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col">
 
                     {/* HERO SECTION */}
-                    <div className="max-w-4xl mb-32">
+                    <div className="max-w-4xl mb-12 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                         <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9] mb-12 mix-blend-exclusion">
                             Signals
                         </h1>
                         <div className="space-y-6">
                             <p className="text-2xl text-white font-bold leading-relaxed">
-                                VirtuSol systems are not campaigns or tools.<br />
-                                <span className="text-accent underline underline-offset-8">They are decision filters.</span>
-                            </p>
-                            <p className="text-xl text-white/50 font-light max-w-2xl leading-relaxed">
-                                Each system answers a different question—but all serve the same purpose: <br />
-                                <span className="text-white">reduce regret.</span>
+                                Each signal answers a different question.<br />
+                                You don’t need all of them.<br />
+                                <span className="text-accent underline underline-offset-8">You need the right one.</span>
                             </p>
                         </div>
                     </div>
 
-                    {/* OUR SERVICES GRID */}
-                    <section className="mb-32">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1px bg-white/10 border border-white/10">
-                            {services.map((service, index) => (
-                                <Link
-                                    key={index}
-                                    href={`/services/${service.slug}`}
-                                    className="group relative p-12 bg-black hover:bg-white/[0.02] transition-colors duration-500 overflow-hidden"
-                                >
-                                    <span className="text-[10px] uppercase tracking-[0.4em] text-white/20 block mb-8">Protocol 0{index + 1}</span>
-                                    <h3 className="text-3xl font-bold text-white uppercase tracking-tight mb-6 group-hover:text-accent transition-colors">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-white/40 font-light leading-relaxed mb-12">
-                                        {service.description}
-                                    </p>
-                                    <Button variant="glow" size="sm" magnetic className="w-fit text-[10px] uppercase tracking-widest font-bold">
-                                        Deep Dive
-                                        <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                    </Button>
-                                </Link>
-                            ))}
-                        </div>
-                    </section>
+                    {/* SIGNAL FIELD */}
+                    <div className="relative flex-1 min-h-[70vh] w-full mt-12 mb-24 cursor-default">
+                        {signals.map((signal, i) => (
+                            <SignalNode key={signal.slug} signal={signal} index={i} />
+                        ))}
 
+                        {/* Background Instructions (Subtle) */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/5 text-[10px] uppercase tracking-[1em] pointer-events-none select-none">
+                            Discover the Field
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
+    );
+}
+
+function SignalNode({ signal, index }: { signal: typeof signals[0], index: number }) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <motion.div
+            className="absolute hidden md:block"
+            style={{ top: signal.pos.top, left: signal.pos.left }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{
+                opacity: 1,
+                scale: 1,
+                y: [0, -20, 0],
+                x: [0, 10, 0]
+            }}
+            transition={{
+                opacity: { duration: 1, delay: signal.delay },
+                scale: { duration: 1, delay: signal.delay },
+                y: { duration: 8 + index, repeat: Infinity, ease: "easeInOut" },
+                x: { duration: 10 + index, repeat: Infinity, ease: "easeInOut" }
+            }}
+        >
+            <div
+                className="relative group"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                {/* Visual Node */}
+                <Link href={`/services/${signal.slug}`} className="block">
+                    <motion.div
+                        className={cn(
+                            "w-12 h-12 rounded-full border border-white/20 backdrop-blur-md flex items-center justify-center transition-all duration-500",
+                            isHovered ? "bg-accent border-accent shadow-[0_0_30px_rgba(47,128,237,0.4)]" : "bg-white/5"
+                        )}
+                        whileHover={{ scale: 1.2 }}
+                    >
+                        <div className="w-2 h-2 rounded-full bg-white/40 group-hover:bg-white" />
+                    </motion.div>
+                </Link>
+
+                {/* label */}
+                <div className={cn(
+                    "absolute top-1/2 left-16 -translate-y-1/2 transition-all duration-500 whitespace-nowrap",
+                    isHovered ? "opacity-100 translate-x-2" : "opacity-40 translate-x-0"
+                )}>
+                    <h3 className="text-sm font-bold uppercase tracking-[0.3em] mb-1">
+                        {signal.title}
+                    </h3>
+                    <AnimatePresence>
+                        {isHovered && (
+                            <motion.p
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="text-[10px] text-white/50 uppercase tracking-widest leading-relaxed max-w-[200px]"
+                            >
+                                {signal.description}
+                                <span className="block mt-2 text-accent">Explore protocol →</span>
+                            </motion.p>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </div>
+        </motion.div>
     );
 }
