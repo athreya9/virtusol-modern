@@ -151,15 +151,15 @@ export function AmbientScene() {
     const { isLowPower } = useWebGLStatus();
 
     // Single massive "Decision Core" bubble
-    const core = {
-        position: [0, 0, -2],
+    const core = useMemo(() => ({
+        position: [0, 0, -2] as [number, number, number],
         size: 1.6,
         color: "#2F80ED",
         speed: 1.0,
         distort: 0.5,
         delay: 0,
-        isLowPower // Pass hint to sub-component
-    };
+        isLowPower
+    }), [isLowPower]);
 
     return (
         <div className="fixed inset-0 z-[-1] bg-black">

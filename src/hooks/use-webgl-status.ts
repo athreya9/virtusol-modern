@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export function useWebGLStatus() {
     const [status, setStatus] = useState<{
@@ -48,5 +48,7 @@ export function useWebGLStatus() {
         });
     }, []);
 
-    return status;
+    const memoizedStatus = useMemo(() => status, [status]);
+
+    return memoizedStatus;
 }
