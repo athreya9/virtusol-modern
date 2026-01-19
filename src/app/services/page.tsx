@@ -125,8 +125,14 @@ function SignalNode({ signal, index }: { signal: typeof signals[0], index: numbe
 
     return (
         <motion.div
-            className="absolute hidden md:block"
-            style={{ top: signal.pos.top, left: signal.pos.left }}
+            className="absolute"
+            style={{
+                top: signal.pos.top,
+                left: signal.pos.left,
+                // On small screens, we might want to scale the positions slightly inward
+                // if we were using a fixed container, but since it's % based, it mostly works.
+                // However, we'll ensure they are visible.
+            }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{
                 opacity: 1,

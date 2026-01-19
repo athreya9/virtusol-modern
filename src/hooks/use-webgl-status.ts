@@ -31,14 +31,14 @@ export function useWebGLStatus() {
             isAvailable = false;
         }
 
-        // 3. Simple Low Power Detection (Mobile or low RAM)
-        // Note: Simple heuristic for now, can be expanded with HardwareConcurrency
+        // 3. Performance Hint (Low Memory)
+        // We use this as a hint, not a hard block for mobile anymore.
         const isLowPower =
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
             (typeof (navigator as any).deviceMemory !== 'undefined' && (navigator as any).deviceMemory < 4);
 
         // 4. Final Verdict
-        const shouldRender = isAvailable && !isKillSwitchEnabled && !isLowPower;
+        // Mobile is no longer blocked by default. We only block if WebGL is unavailable or kill switch is active.
+        const shouldRender = isAvailable && !isKillSwitchEnabled;
 
         setStatus({
             isAvailable,

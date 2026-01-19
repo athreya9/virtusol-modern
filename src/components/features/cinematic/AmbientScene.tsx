@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Float, MeshDistortMaterial, Sphere, Points, PointMaterial } from "@react-three/drei";
 import { CinematicLens } from "./CinematicLens";
+import { useWebGLStatus } from "@/hooks/use-webgl-status";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
  * Liquid Bubble Component
  * Reactive spheres with high distortion and vibrancy.
  */
-function LiquidBubble({ position, size, color, speed, distort, delay }: any) {
+function LiquidBubble({ position, size, color, speed, distort, delay, isLowPower }: any) {
     const meshRef = useRef<THREE.Mesh>(null);
     const mouse = useRef({ x: 0, y: 0 });
 
@@ -42,7 +43,7 @@ function LiquidBubble({ position, size, color, speed, distort, delay }: any) {
 
     return (
         <Float speed={speed} rotationIntensity={0.5} floatIntensity={0.5}>
-            <Sphere ref={meshRef} args={[size, 64, 64]} position={position}>
+            <Sphere ref={meshRef} args={[size, isLowPower ? 32 : 64, isLowPower ? 32 : 64]} position={position}>
                 <MeshDistortMaterial
                     color="#000000"
                     speed={speed * 2}
@@ -101,7 +102,45 @@ function GridFloor() {
     );
 }
 
+function SceneContent({ core }: { core: any }) {
+    const { viewport, camera } = useThree();
+
+    // Adaptive FOV based on aspect ratio
+    // If height > width (mobile portrait), we increase FOV to keep the core centered and visible
+    useLayoutEffect(() => {
+        if (camera instanceof THREE.PerspectiveCamera) {
+            const aspect = viewport.width / viewport.height;
+            if (aspect < 1) {
+                camera.fov = 65; // Wide for mobile
+            } else {
+                camera.fov = 45; // Standard for desktop
+            }
+            camera.updateProjectionMatrix();
+        }
+    }, [viewport, camera]);
+
+    return (
+        <>
+            <color attach="background" args={["#000000"]} />
+            <fog attach="fog" args={["#000000", 5, 20]} />
+
+            <ambientLight intensity={0.1} />
+            <pointLight position={[10, 10, 10]} intensity={3} color="#2F80ED" />
+            <pointLight position={[-10, -10, -10]} intensity={1.5} color="#2ECC71" />
+
+            <LiquidBubble {...core} />
+
+            <ParticleField />
+            <GridFloor />
+
+            <CinematicLens />
+        </>
+    );
+}
+
 export function AmbientScene() {
+    const { isLowPower } = useWebGLStatus();
+
     // Single massive "Decision Core" bubble
     const core = {
         position: [0, 0, -2],
@@ -109,29 +148,23 @@ export function AmbientScene() {
         color: "#2F80ED",
         speed: 1.0,
         distort: 0.5,
-        delay: 0
+        delay: 0,
+        isLowPower // Pass hint to sub-component
     };
 
     return (
         <div className="fixed inset-0 z-[-1] bg-black">
             <Canvas
-                gl={{ alpha: true, antialias: true, stencil: false, depth: true }}
-                dpr={[1, 2]}
+                gl={{
+                    alpha: true,
+                    antialias: !isLowPower, // Disable AA if low power for perf
+                    stencil: false,
+                    depth: true
+                }}
+                dpr={isLowPower ? 1 : [1, 2]} // Cap DPR at 1 for mobile/low-power
                 camera={{ position: [0, 0, 8], fov: 45 }}
             >
-                <color attach="background" args={["#000000"]} />
-                <fog attach="fog" args={["#000000", 5, 20]} />
-
-                <ambientLight intensity={0.1} />
-                <pointLight position={[10, 10, 10]} intensity={3} color="#2F80ED" />
-                <pointLight position={[-10, -10, -10]} intensity={1.5} color="#2ECC71" />
-
-                <LiquidBubble {...core} />
-
-                <ParticleField />
-                <GridFloor />
-
-                <CinematicLens />
+                <SceneContent core={core} />
             </Canvas>
         </div>
     );
