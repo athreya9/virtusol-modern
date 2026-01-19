@@ -155,13 +155,8 @@ export function AmbientScene() {
     return (
         <div className="fixed inset-0 z-[-1] bg-black">
             <Canvas
-                gl={{
-                    alpha: true,
-                    antialias: !isLowPower, // Disable AA if low power for perf
-                    stencil: false,
-                    depth: true
-                }}
-                dpr={isLowPower ? 1 : [1, 2]} // Cap DPR at 1 for mobile/low-power
+                gl={{ alpha: true, antialias: true, stencil: false, depth: true }}
+                dpr={[1, 2]}
                 camera={{ position: [0, 0, 8], fov: 45 }}
             >
                 <SceneContent core={core} />
