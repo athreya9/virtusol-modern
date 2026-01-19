@@ -25,7 +25,7 @@ export function CinematicLens() {
     });
 
     return (
-        <EffectComposer enableNormalPass>
+        <EffectComposer>
             <Noise
                 opacity={0.12}
                 premultiply

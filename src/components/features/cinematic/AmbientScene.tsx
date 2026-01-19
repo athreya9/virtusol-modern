@@ -111,47 +111,11 @@ function GridFloor() {
     );
 }
 
-function SceneContent({ core }: { core: any }) {
-    const { viewport, camera } = useThree();
-
-    // Adaptive FOV based on aspect ratio
-    // If height > width (mobile portrait), we increase FOV to keep the core centered and visible
-    useLayoutEffect(() => {
-        if (camera instanceof THREE.PerspectiveCamera) {
-            const aspect = viewport.width / viewport.height;
-            if (aspect < 1) {
-                camera.fov = 65; // Wide for mobile
-            } else {
-                camera.fov = 45; // Standard for desktop
-            }
-            camera.updateProjectionMatrix();
-        }
-    }, [viewport, camera]);
-
-    return (
-        <>
-            <color attach="background" args={["#000000"]} />
-            <fog attach="fog" args={["#000000", 5, 20]} />
-
-            <ambientLight intensity={0.1} />
-            <pointLight position={[10, 10, 10]} intensity={3} color="#2F80ED" />
-            <pointLight position={[-10, -10, -10]} intensity={1.5} color="#2ECC71" />
-
-            <LiquidBubble {...core} />
-
-            <ParticleField />
-            <GridFloor />
-
-            <CinematicLens />
-        </>
-    );
-}
-
 export function AmbientScene() {
     const { isLowPower } = useWebGLStatus();
 
     // Single massive "Decision Core" bubble
-    const core = useMemo(() => ({
+    const core = {
         position: [0, 0, -2] as [number, number, number],
         size: 1.6,
         color: "#2F80ED",
@@ -159,7 +123,7 @@ export function AmbientScene() {
         distort: 0.5,
         delay: 0,
         isLowPower
-    }), [isLowPower]);
+    };
 
     return (
         <div className="fixed inset-0 z-[-1] bg-black">
@@ -168,7 +132,19 @@ export function AmbientScene() {
                 dpr={[1, 2]}
                 camera={{ position: [0, 0, 8], fov: 45 }}
             >
-                <SceneContent core={core} />
+                <color attach="background" args={["#000000"]} />
+                <fog attach="fog" args={["#000000", 5, 20]} />
+
+                <ambientLight intensity={0.1} />
+                <pointLight position={[10, 10, 10]} intensity={3} color="#2F80ED" />
+                <pointLight position={[-10, -10, -10]} intensity={1.5} color="#2ECC71" />
+
+                <LiquidBubble {...core} />
+
+                <ParticleField />
+                <GridFloor />
+
+                <CinematicLens />
             </Canvas>
         </div>
     );
