@@ -19,14 +19,16 @@ function LiquidBubble({ position, size, color, speed, distort, delay, isLowPower
     const meshRef = useRef<THREE.Mesh>(null);
     const mouse = useRef({ x: 0, y: 0 });
 
+    const initialPos = useMemo(() => new THREE.Vector3(...position), [position]);
+
     useFrame((state) => {
         const time = state.clock.getElapsedTime() + delay;
         if (meshRef.current) {
-            // Harmonic floating motion
-            meshRef.current.position.y += Math.sin(time) * 0.002;
-            meshRef.current.position.x += Math.cos(time * 0.5) * 0.001;
+            // 1. Harmonic floating motion (subtle)
+            const floatY = Math.sin(time) * 0.1;
+            const floatX = Math.cos(time * 0.5) * 0.05;
 
-            // Mouse Repulsion/Magnetism logic
+            // 2. Mouse Interaction (Repulsion)
             const targetX = (state.mouse.x * state.viewport.width) / 2;
             const targetY = (state.mouse.y * state.viewport.height) / 2;
 
@@ -34,10 +36,17 @@ function LiquidBubble({ position, size, color, speed, distort, delay, isLowPower
             const dy = meshRef.current.position.y - targetY;
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            if (dist < 3) {
-                meshRef.current.position.x += dx * 0.01;
-                meshRef.current.position.y += dy * 0.01;
+            // Repulsion force
+            const repulsionStrength = 0.5;
+            if (dist < 4 && dist > 0.1) {
+                meshRef.current.position.x += (dx / dist) * 0.02 * repulsionStrength;
+                meshRef.current.position.y += (dy / dist) * 0.02 * repulsionStrength;
             }
+
+            // 3. Spring back to initial position + floating offset
+            meshRef.current.position.x += (initialPos.x + floatX - meshRef.current.position.x) * 0.02;
+            meshRef.current.position.y += (initialPos.y + floatY - meshRef.current.position.y) * 0.02;
+            meshRef.current.position.z += (initialPos.z - meshRef.current.position.z) * 0.02;
         }
     });
 
