@@ -62,27 +62,23 @@ export function HomeHero() {
                         ref={titleRef}
                         className="text-7xl md:text-[10rem] font-bold tracking-[-0.05em] leading-[0.85] text-white mix-blend-exclusion uppercase"
                     >
-                        Strategic Signals <br />
-                        <span className="text-transparent stroke-text">for Real Decisions</span>
+                        VirtuSol is a <br />
+                        <span className="text-transparent stroke-text">growth decision system.</span>
                     </h1>
 
                     <p
                         ref={subtitleRef}
                         className="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto text-balance leading-relaxed pt-8"
                     >
-                        Clarity for teams navigating noise, timing, and irreversible choices.
+                        We don't chase noise. We filter signals, prevent wrong moves, and activate only what works.
                     </p>
 
                     {/* ⚡ Cinematic Action */}
                     <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-12">
                         <Button variant="glow" size="lg" magnetic className="px-12 h-20 text-xl font-bold uppercase tracking-widest transition-all hover:scale-105 active:scale-95">
-                            Enter Protocol
+                            Request Intelligence Briefing
                             <ArrowRight className="ml-3 h-7 w-7" />
                         </Button>
-                        <div className="group flex items-center gap-4 cursor-pointer">
-                            <span className="h-[1px] w-12 bg-white/30 group-hover:w-24 transition-all duration-500"></span>
-                            <span className="text-white/40 group-hover:text-white transition-colors text-sm uppercase tracking-widest">Discover Why</span>
-                        </div>
                     </div>
                 </div>
             </div>
